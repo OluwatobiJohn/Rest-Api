@@ -18,12 +18,8 @@ app.get('/', (req, res) => {
 app.get('/users', (req, res) => {
     res.json({ ok: true, users});
 });
-//Get User
-app.get('/user/:name', (req,res) => {
-    const { name } = req.params;
-    const user = users.filter((user) => user.name === name)[0];
-    res.json({ ok: true, user });
-});
+
+
 
 //Add User
 app.post('/adduser', (req, res) => {
